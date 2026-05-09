@@ -210,7 +210,6 @@ html {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
 }
@@ -832,10 +831,6 @@ html {
 
     .about h2 {
         font-size: 2rem;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
     }
 
     .about-features {
