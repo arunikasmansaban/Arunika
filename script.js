@@ -66,24 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ====== Dynamic Button Actions ====== //
-const joinButton = document.querySelector('.hero .btn-primary');
-const registerButtons = document.querySelectorAll('.kegiatan-card .btn-secondary');
-
-joinButton.addEventListener('click', () => {
-    alert('Terima kasih! Anda akan dialihkan ke halaman pendaftaran.');
-    // Bisa diganti dengan window.location.href = '/register';
-});
-
-registerButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const eventTitle = button.closest('.kegiatan-card').querySelector('h3').textContent;
-        alert(`Anda akan mendaftar untuk: ${eventTitle}`);
-        // Bisa diganti dengan window.location.href = '/register?event=' + eventTitle;
-    });
-});
-
 // ====== Counter Animation untuk Statistik ====== //
 const counters = document.querySelectorAll('.stat-item h3');
 
