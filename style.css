@@ -148,6 +148,58 @@ html {
     transition: 0.3s;
 }
 
+/* Membungkus video agar responsive */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;   /* ukuran maksimal di laptop */
+    margin:0 auto;
+    gap: 10px; /* biar video tetap di tengah */
+    overflow: hidden;
+    border-radius: 12px; /* agar sudutnya rapi */
+}
+
+/* Videonya */
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* biar video tidak gepeng */
+}
+
+/* Untuk HP: lebih kecil dan rapi */
+@media (max-width: 600px) {
+    .video-container {
+    max-width: 100%;
+    border-radius: 10px;
+}
+}
+
+.containervid h2{
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.containervid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;    
+}
+
+.containervid p{
+    color: var(--light-text);
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: justify;
+}
 /* ====== Hero Section ====== */
 .hero {
     background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
