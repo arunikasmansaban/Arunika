@@ -35,7 +35,7 @@
         <div class="hero-content">
             <h1>Selamat Datang di ARUNIKA</h1>
             <p>Jaringan Alumni Terbaik untuk Masa Depan Cerah</p>
-            <a href="arunika.html" class="btn btn-primary">Don't Touch</a>
+            <a href="arunika.html" class="btn btn-primary">Touch Me</a>
         </div>
         <div class="hero-overlay"></div>
     </section>
@@ -51,18 +51,13 @@
                     <div class="about-features">
                         <div class="feature-item">
                             <i class="fas fa-network-wired"></i>
-                            <h3>Jaringan Luas</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim iure deleniti sint quisquam ducimus ex eligendi et inventore deserunt obcaecati, expedita officiis, ea odit aperiam laborum. Magni dolorum magnam eum.</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-briefcase"></i>
-                            <h3>Peluang Karir</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus fugiat porro voluptates ut distinctio, voluptatum animi ullam molestiae perspiciatis omnis impedit alias ex, iure, tempora sapiente dignissimos odio praesentium dolorum.</p>
+                            <h3>KONVERGENSI</h3>
+                            <p>Sebagaimana fajar yang menyentuh setiap sudut bumi secara bersamaan, mari kita jadikan angkatan ini sebagai ruang untuk saling memantulkan inspirasi. Kita mungkin melangkah ke arah yang berbeda, namun biarlah setiap pencapaian kita menjadi gema yang saling menguatkan. Tumbuhlah dengan megah tanpa menjatuhkan, dan bersinarlah dengan terang tanpa harus memadamkan cahaya di sekitar kita.</p>
                         </div>
                         <div class="feature-item">
                             <i class="fas fa-handshake"></i>
-                            <h3>Kolaborasi</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, similique nemo modi dolorum totam dignissimos excepturi aliquid aliquam nostrum consectetur quaerat ea explicabo nihil id fuga? Neque delectus iure ea!</p>
+                            <h3>SINERGI</h3>
+                            <p>Arunika menandai mulainya sebuah perjalanan panjang. Di balik pertemuan ini, ada kesepakatan tak tertulis untuk terus saling menguatkan. Mari bersinar di bidang masing-masing tanpa memadamkan cahaya sesama, karena mulai hari ini, keberhasilanmu adalah kebanggaan bagi cerita yang kita miliki bersama.</p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +65,6 @@
         </div>
     </section>
 
-    <!-- Alumni Directory Section -->
     <section class="alumni" id="alumni">
         <div class="container">
             <h2>Penanggung Jawab</h2>
@@ -105,7 +99,7 @@
 
                 <div class="alumni-card">
                     <div class="alumni-image">
-                        <img src="https://via.placeholder.com/250x250/ffc107/333333?text=Alumni+3" alt="Alumni">
+                        <img src="https://via.placeholder.com/250x250/ffc107/333333?text=Alumni+3" alt="Foto iksal">
                     </div>
                     <h3>Iksal Meilana</h3>
                     <p class="angkatan">Angkatan 2026</p>
@@ -149,20 +143,37 @@
         </div>
     </section>
 
-    <!-- Kegiatan Section -->
+
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal-card">
+    <h2 id="modalTitle">Judul</h2>
+        <div class="choice-container">
+        <a href="#" id="linkA" class="choice-link" target="_blank"><strong id="nameA">Link 1</strong></a>
+        <a href="#" id="linkB" class="choice-link" target="_blank"><strong id="nameB">Link 2</strong></a>
+        <a href="#" id="linkC" class="choice-link" target="_blank"><strong id="nameC">Link 3</strong></a>
+        </div>
+    <button id="closeModal" class="btn-close">Batal</button>
+    </div>
+</div>
+
     <section class="kegiatan" id="kegiatan">
         <div class="container">
             <h2>Kegiatan & Event</h2>
             <div class="kegiatan-grid">
                 <div class="kegiatan-card">
                     <div class="kegiatan-image">
-                        <img src="asset/img/assetlain/Gunungbatok.jpg" alt="Seminar">
+                        <img src="asset/img/assetlain/Gunungbatok.jpg" alt="Study tour">
                         <span class="badge">Study Tour</span>
                     </div>
                     <h3>Study Tour 2025</h3>
                     <p class="date"><i class="far fa-calendar"></i> 13 Januari 2025</p>
                     <p class="description">Study tour SMAN 1 Banjar ke Malang menjadi perjalanan edukatif yang penuh kesan, memadukan eksplorasi wawasan dengan keseruan wisata alam Jawa Timur.</p>
-                    <a href="https://drive.google.com/drive/folders/1xDs7j75KOLFOgzuY5FtWxWtH6NTs8VlF" class="btn btn-secondary">Dokumentasi</a>
+                    <button class="btn btn-secondary openModalBtn" 
+                    data-judul="Study Tour" 
+                    data-l1-nama="Drive1" data-l1-url="https://drive.google.com/drive/folders/1xDs7j75KOLFOgzuY5FtWxWtH6NTs8VlF"
+                    data-l2-nama="Drive2" data-l2-url="https://drive.google.com/drive/folders/1MjcM3lZDGYT3Mxei2ZngtxiGy7XLJI39?usp=drive_link">
+                    Dokumentasi
+                    </button>
                 </div>
 
                 <div class="kegiatan-card">
@@ -173,7 +184,13 @@
                     <h3>Year Book 2026</h3>
                     <p class="date"><i class="far fa-calendar"></i> 22 Mei 2026</p>
                     <p class="description">Buku tahunan angkatan Arunika merangkum jejak perjalanan dan memori indah masa sekolah dalam sebuah karya visual yang penuh makna.</p>
-                    <a href="https://drive.google.com/drive/folders/1AZDQuCHcCdqoMQ4aglD4JIDQUBQRD8_8?usp=sharing" class="btn btn-secondary">Dokumentasi</a>
+                    <button class="btn btn-secondary openModalBtn" 
+                    data-judul="Year Book" 
+                    data-l1-nama="Drive1" data-l1-url="https://drive.google.com/drive/folders/1AZDQuCHcCdqoMQ4aglD4JIDQUBQRD8_8?usp=sharing"
+                    data-l2-nama="Drive2" data-l2-url=""
+                    data-l3-nama="Drive3" data-l3-url="">
+                    Dokumentasi
+                    </button>
                 </div>
 
                 <div class="kegiatan-card">
@@ -184,7 +201,12 @@
                     <h3>Pepisahan SMAN 1 BANJAR</h3>
                     <p class="date"><i class="far fa-calendar"></i> 19 Mei 2026</p>
                     <p class="description">Perpisahan angkatan Arunika menjadi momen haru yang menandai akhir sebuah babak sekaligus awal langkah baru menuju impian masing-masing.</p>
-                    <a href="#" class="btn btn-secondary">Dokumentasi</a>
+                    <button class="btn btn-secondary openModalBtn" 
+                    data-judul="Perpisahan" 
+                    data-l1-nama="Coming Soon" data-l1-url=""
+                    data-l2-nama="Coming Soon" data-l2-url="">
+                    Dokumentasi
+                    </button>
                 </div>
             </div>
         </div>
@@ -223,13 +245,13 @@
                 </div>
 
                 <div class="testimoni-card">
-                    <p class="quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta odit voluptatibus in quibusdam sit placeat. Sequi itaque odit quae. Eveniet, facilis. Tempore nobis provident saepe nulla sapiente amet totam illum?"</p>
-                    <p class="nama">- Galuh</p>
+                    <p class="quote">"Jadilah besar tanpa mengecilkan, jadilah tinggi tanpa merendahkan. Karena pada akhirnya, keberhasilan sejati adalah saat kita bisa menoleh ke belakang dan melihat teman-teman kita ikut bersinar bersama."</p>
+                    <p class="nama">- Syafa Aulia</p>
                 </div>
 
                 <div class="testimoni-card">
-                    <p class="quote">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laboriosam, magni voluptatum soluta quis totam architecto rem aliquid, cupiditate dolore consequuntur facilis dignissimos quo, corrupti officiis iusto sed doloremque aspernatur."</p>
-                    <p class="nama">- Galuh</p>
+                    <p class="quote">"Berpencarlah untuk berakar, bertumbuhlah untuk merangkul. Kita adalah satu rimbun yang akarnya tetap saling menguatkan meski dahan kita tak lagi bersentuhan."</p>
+                    <p class="nama">- Fawwaz Naufal Zahran</p>
                 </div>
             </div>
         </div>
@@ -299,6 +321,7 @@
         </div>
     </footer>
 
+    
     <script src="script.js"></script>
 </body>
 </html>

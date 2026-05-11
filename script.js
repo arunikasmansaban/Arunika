@@ -161,6 +161,68 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+const modal = document.getElementById('modalOverlay');
+const closeBtn = document.getElementById('closeModal');
+const allButtons = document.querySelectorAll('.openModalBtn');
+
+// Elemen di dalam modal
+const modalTitle = document.getElementById('modalTitle');
+const linkA = document.getElementById('linkA');
+const nameA = document.getElementById('nameA');
+const linkB = document.getElementById('linkB');
+const nameB = document.getElementById('nameB');
+const linkC = document.getElementById('linkC'); 
+const nameC = document.getElementById('nameC'); 
+
+allButtons.forEach(btn => {
+  btn.onclick = function() {
+    // 1. Ambil data dari atribut tombol
+    const judul = this.getAttribute('data-judul');
+    const n1 = this.getAttribute('data-l1-nama');
+    const u1 = this.getAttribute('data-l1-url');
+    const n2 = this.getAttribute('data-l2-nama');
+    const u2 = this.getAttribute('data-l2-url');
+    const n3 = this.getAttribute('data-l3-nama');
+    const u3 = this.getAttribute('data-l3-url');
+
+    // 2. Masukkan data ke elemen modal
+    modalTitle.innerText = judul;
+    
+    // Set Link 1
+    nameA.innerText = n1;
+    linkA.href = u1;
+    
+    // Set Link 2
+    nameB.innerText = n2;
+    linkB.href = u2;
+
+    // Set Link 3
+    nameC.innerText = n3;
+    linkC.href = u3;
+
+    // 3. Logika Sembunyikan jika data kosong (n3 tidak ada)
+    if (!n3 || n3 === "") {
+      linkC.style.display = 'none';
+    } else {
+      linkC.style.display = 'flex'; // atau 'block' sesuai CSS kamu
+    }
+
+    // Tambahan: Berlaku juga untuk Link 2 jika sewaktu-waktu hanya butuh 1 link
+    if (!n2 || n2 === "") {
+      linkB.style.display = 'none';
+    } else {
+      linkB.style.display = 'flex';
+    }
+
+    modal.style.display = 'flex';
+  }
+});
+
+// Fungsi tutup
+closeBtn.onclick = () => modal.style.display = 'none';
+window.onclick = (e) => { if (e.target == modal) modal.style.display = 'none'; }
+
+
 // ====== Add CSS Variables Support ====== //
 const style = document.createElement('style');
 style.textContent = `
