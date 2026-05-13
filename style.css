@@ -38,6 +38,19 @@ html {
     scroll-behavior: smooth;
 }
 
+.coverjudul {
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    background-color: var(--primary-yellow);
+    color: var(--dark-text);
+}
+
 /* ====== Buttons ====== */
 .btn {
     display: inline-block;
@@ -497,7 +510,10 @@ html {
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 30px;
+    text-align: justify;
 }
+
+.awards-header p{margin-top: 10px;}
 
 .awards h2 {
     font-size: 2.5rem;
