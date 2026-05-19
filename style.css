@@ -172,6 +172,69 @@ html {
     border-radius: 12px; /* agar sudutnya rapi */
 }
 
+/* Overlay menutupi seluruh layar */
+.modal-overlayB {
+  display: none; /* Tersembunyi saat awal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Latar belakang agak transparan */
+  z-index: 9999; /* Memastikan berada di paling depan */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Kotak Konten Iklan */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+}
+
+.modal-content h2 {
+    color: var(--primary-green);
+}
+
+/* Gambar Iklan agar responsif */
+.iklan-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+/* Tombol Tutup (X) */
+.close-btnq {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btnq:hover {
+  color: #333;
+}
+
+/* Kelas bantuan untuk memunculkan modal dengan animasi */
+.modal-overlayB.show {
+  display: flex !important;
+  opacity: 1;
+}
+
 /* Videonya */
 .video-container video {
     width: 100%;

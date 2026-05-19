@@ -161,11 +161,37 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+// Fungsi untuk menampilkan iklan setelah halaman web selesai dimuat
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('iklanModal');
+    setTimeout(() => {
+    modal.classList.add('show');
+    }, 1000); 
+});
+
+// Fungsi untuk menutup iklan
+function tutupIklan() {
+    const modal = document.getElementById('iklanModal');
+    modal.classList.remove('show');
+
+    setTimeout(() => {
+    modal.style.display = 'none';
+    }, 400);
+}
+
+// Tambahan: Menutup iklan jika pengguna mengklik area luar kotak iklan
+window.onclick = function(event) {
+  const modal = document.getElementById('iklanModal');
+  if (event.target === modal) {
+    tutupIklan();
+  }
+};
+
+
 const modal = document.getElementById('modalOverlay');
 const closeBtn = document.getElementById('closeModal');
 const allButtons = document.querySelectorAll('.openModalBtn');
 
-// Elemen di dalam modal
 const modalTitle = document.getElementById('modalTitle');
 const linkA = document.getElementById('linkA');
 const nameA = document.getElementById('nameA');
@@ -175,8 +201,7 @@ const linkC = document.getElementById('linkC');
 const nameC = document.getElementById('nameC'); 
 
 allButtons.forEach(btn => {
-  btn.onclick = function() {
-    // 1. Ambil data dari atribut tombol
+    btn.onclick = function() {
     const judul = this.getAttribute('data-judul');
     const n1 = this.getAttribute('data-l1-nama');
     const u1 = this.getAttribute('data-l1-url');
@@ -185,37 +210,31 @@ allButtons.forEach(btn => {
     const n3 = this.getAttribute('data-l3-nama');
     const u3 = this.getAttribute('data-l3-url');
 
-    // 2. Masukkan data ke elemen modal
     modalTitle.innerText = judul;
     
-    // Set Link 1
     nameA.innerText = n1;
     linkA.href = u1;
     
-    // Set Link 2
     nameB.innerText = n2;
     linkB.href = u2;
 
-    // Set Link 3
     nameC.innerText = n3;
     linkC.href = u3;
 
-    // 3. Logika Sembunyikan jika data kosong (n3 tidak ada)
     if (!n3 || n3 === "") {
-      linkC.style.display = 'none';
+        linkC.style.display = 'none';
     } else {
-      linkC.style.display = 'flex'; // atau 'block' sesuai CSS kamu
+        linkC.style.display = 'flex';
     }
 
-    // Tambahan: Berlaku juga untuk Link 2 jika sewaktu-waktu hanya butuh 1 link
     if (!n2 || n2 === "") {
-      linkB.style.display = 'none';
+        linkB.style.display = 'none';
     } else {
-      linkB.style.display = 'flex';
+        linkB.style.display = 'flex';
     }
 
     modal.style.display = 'flex';
-  }
+    }
 });
 
 // Fungsi tutup
